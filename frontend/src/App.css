@@ -1,0 +1,194 @@
+.app {
+  min-height: 100vh;
+  padding: 32px;
+  color: #f4f7f5;
+  background:
+    radial-gradient(circle at top right, #174d36 0%, transparent 35%),
+    #07110f;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  color: #07110f;
+  font-size: 1.25rem;
+  font-weight: 800;
+  background: #9cff57;
+  border-radius: 12px;
+}
+
+.brand-name,
+.description {
+  margin: 0;
+}
+
+.brand-name {
+  font-weight: 700;
+}
+
+.description {
+  margin-top: 2px;
+  color: #9aada6;
+  font-size: 0.875rem;
+}
+
+.creator-section {
+  width: calc(100% - 32px);
+  max-width: 760px;
+  margin: 100px auto 60px;
+}
+
+.eyebrow {
+  margin-bottom: 16px;
+  color: #9cff57;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+h1 {
+  max-width: 650px;
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+/*
+  clamp() creates a responsive font size.
+  It uses 2.5rem at minimum, 5rem at maximum, and scales between them.
+  A simpler alternative would be: font-size: 4rem;
+*/
+
+.intro {
+  max-width: 580px;
+  margin: 24px 0 40px;
+  color: #b7c5c0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.url-form {
+  padding: 24px;
+  background: rgba(16, 34, 29, 0.9);
+  border: 1px solid #29443a;
+  border-radius: 20px;
+}
+
+.url-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.form-row {
+  /* Flexbox places the input and button beside each other. */
+  display: flex;
+  gap: 10px;
+}
+
+.form-row input {
+  flex: 1;
+  min-width: 0;
+  padding: 15px 16px;
+  color: #f4f7f5;
+  background: #0a1814;
+  border: 1px solid #39564c;
+  border-radius: 10px;
+  outline: none;
+}
+
+.form-row input:focus {
+  border-color: #9cff57;
+  box-shadow: 0 0 0 3px rgba(156, 255, 87, 0.15);
+}
+
+.form-row button {
+  padding: 15px 20px;
+  color: #07110f;
+  font-weight: 800;
+  background: #9cff57;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.form-row button:hover {
+  background: #b2ff7e;
+}
+
+.form-help {
+  margin: 12px 0 0;
+  color: #82968e;
+  font-size: 0.875rem;
+}
+
+/* Grid creates three equal columns for the process steps. */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.step {
+  padding: 18px;
+  background: rgba(16, 34, 29, 0.65);
+  border: 1px solid #233c33;
+  border-radius: 16px;
+}
+
+.step span {
+  color: #9cff57;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.step h2 {
+  margin: 18px 0 6px;
+  font-size: 1rem;
+}
+
+.step p {
+  margin: 0;
+  color: #91a39c;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #71867e;
+  font-size: 0.875rem;
+}
+
+/* These rules apply on screens that are 650px wide or smaller. */
+@media (max-width: 650px) {
+  .app {
+    padding: 20px;
+  }
+
+  .creator-section {
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
